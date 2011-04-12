@@ -6,6 +6,10 @@ class DirectoryName
    def to_s
       Dir.getwd
    end
+
+   def create_dir(dir_name)
+      Dir.mkdir(dir_name)
+   end
 # begin
 #      directory_name = Dir::pwd + "/" + "hdfr"#tickler_files"
 #      puts directory_name
