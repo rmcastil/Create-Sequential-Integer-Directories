@@ -10,6 +10,10 @@ class DirectoryName
    def create_dir(dir_name)
       Dir.mkdir(dir_name)
    end
+
+   def create_sequence_array_to(size)
+      Array.new(size)
+   end
 # begin
 #      directory_name = Dir::pwd + "/" + "hdfr"#tickler_files"
 #      puts directory_name
