@@ -5,8 +5,14 @@ class DirectoryName
       Dir.getwd
    end
 
-   def create_dir(dir_name)
-      Dir.mkdir(dir_name) 
+   def create_int_dir(dir_number)
+      if dir_number > 0
+         if dir_number < 10
+            Dir.mkdir("0" + dir_number.to_s())
+         else
+            Dir.mkdir(dir_number.to_s())
+         end
+      end
    end
 
    def create_sequence_array_to(size)
@@ -16,5 +22,4 @@ class DirectoryName
    end
 end
 
-foo = DirectoryName.new()
-foo.create_sequence_array_to(2).each {|i| foo.create_dir(i.to_s())}
+# 1.upto(31) {|i| Dir.mkdir(i.to_s())}
