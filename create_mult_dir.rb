@@ -12,7 +12,9 @@ class DirectoryName
    end
 
    def create_sequence_array_to(size)
-      Array.new(size)
+      a = Array.new
+      1.upto(size) {|i| a.push(i)}
+      return a
    end
 # begin
 #      directory_name = Dir::pwd + "/" + "hdfr"#tickler_files"

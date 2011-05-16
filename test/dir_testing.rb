@@ -14,6 +14,9 @@ class TestDirectories < Test::Unit::TestCase
    def test_string_sequence_created
       # Method that creates a sequence of strings
       someArray = DirectoryName.new().create_sequence_array_to(5) 
-      assert_equal(someArray.length, 5)
+      assert_equal(5, someArray.length)
+      assert_equal(1, someArray[0])
+      assert_equal(5, someArray[4])
+      assert_equal(nil, someArray[20])
    end
 end
