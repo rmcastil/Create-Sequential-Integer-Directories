@@ -12,6 +12,8 @@ class DirectoryName
          else
             Dir.mkdir(dir_number.to_s())
          end
+      else
+         puts "Cannot create directories with negative intergers"
       end
    end
 
@@ -22,4 +24,5 @@ class DirectoryName
    end
 end
 
-# 1.upto(31) {|i| Dir.mkdir(i.to_s())}
+a = DirectoryName.new()
+1.upto(31) {|i| a.create_int_dir(i)}

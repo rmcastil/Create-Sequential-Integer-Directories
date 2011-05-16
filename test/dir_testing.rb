@@ -5,10 +5,21 @@ class TestDirectories < Test::Unit::TestCase
       assert_equal("/Users/rmcastil/dev/create_43_folders", DirectoryName.new().to_s)
    end
 
-   def test_directory_created
-      DirectoryName.new().create_dir("foobar")
-      assert(File.directory?("/Users/rmcastil/dev/create_43_folders/foobar"))
-      Dir.delete("foobar")
+   def test_single_digit_directory_created
+      DirectoryName.new().create_int_dir(1)
+      assert(File.directory?("01"))
+      Dir.delete("01")
+   end
+
+   def test_multiple_digit_directory_created
+      DirectoryName.new().create_int_dir(22)
+      assert(File.directory?("22"))
+      Dir.delete("22")
+   end
+
+   def test_no_negative_directory_created
+      DirectoryName.new().create_int_dir(-5)
+      assert(! File.directory?("-5"))
    end
 
    def test_string_sequence_created
