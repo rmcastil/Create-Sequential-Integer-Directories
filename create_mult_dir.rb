@@ -25,4 +25,4 @@ class DirectoryName
 end
 
 a = DirectoryName.new()
-1.upto(31) {|i| a.create_int_dir(i)}
+1.upto(ARGV[0].to_i) {|i| a.create_int_dir(i)}
