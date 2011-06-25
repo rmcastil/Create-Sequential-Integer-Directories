@@ -1,1 +1,1 @@
-This is a Ruby script that creates x number of folders. Its rather trivial but I used it to learn how to program in Ruby using TDD. If you look through the commits you'll notice how it evolved as I began to understand the intriquencies of Ruby.
+This is a Ruby script that creates x number of folders. I used it to create folders for a digital tickler file for my GTD system. Its rather trivial but I used it to learn how to program in Ruby using TDD. If you look through the commits you'll notice how it evolved as I began to understand the intricacies of Ruby.
